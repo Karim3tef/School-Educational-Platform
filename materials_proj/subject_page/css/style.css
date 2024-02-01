@@ -1,0 +1,452 @@
+* {
+    /* --accentColor: #4B37AD; */
+    --accentColor: #4362f5;
+    /* --accentColor: #4ac7cd; */
+    /* --accentColor: #c6b9ff; */
+    --mainBorderRadius: 7px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.5s;
+
+}
+
+.animate__animated.animate__shakeY {
+    --animate-duration: 3s;
+  }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accentColor);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4533a1e1;
+}
+
+body {
+    background-color: var(--accentColor);
+    display: flex;
+    overflow-x: hidden;
+}
+
+main.Chemistry {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #e9ecf3; */
+    background-color: #e6e8f4;
+    /* margin-top: 10px; */
+    /* border-radius: 20px 0 0 15px; */
+    padding: 30px 40px 20px;
+    overflow: hidden;
+    overflow-y: auto;
+    /* box-shadow: rgb(59, 63, 126) -2px 0 5px 7px; */
+}
+
+nav.Chemistry {
+    width: 50px;
+    height: 100vh;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+nav.Chemistry ul {
+    list-style-type: none;
+}
+
+nav.Chemistry li {
+    background: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span.logo, nav.Chemistry li {
+    box-shadow: rgb(25, 31, 104) 2px 2px 10px;
+}
+
+nav.Chemistry li i {
+    color: var(--accentColor);
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+span.logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    color: var(--accentColor);
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span.logo i {
+    font-size: 20px;
+}
+
+span.logout {
+    position: absolute;
+    bottom: 30px;
+    font-size: 20px;
+    text-shadow: rgb(31, 40, 94) 2px 2px 7px;
+}
+
+@media only screen and (max-width: 555px) {
+    body {
+        flex-direction: column-reverse;
+        background-color: white;
+    }
+
+    main.Chemistry {
+        width: 100vw;
+        height: calc(100vh - 60px);
+        border-radius: 0;
+        box-shadow: none;
+        padding: 20px;
+    }
+
+    nav.Chemistry {
+        width: 100vw;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--accentColor);
+        border-radius: 20px 20px 0 0;
+        box-shadow: gray -5px 0 7px 7px;
+    }
+
+    nav.Chemistry ul {
+        display: flex;
+        margin: 0;
+    }
+
+    nav.Chemistry ul li{
+        margin: 0 10px 0 0;
+    }
+
+    nav.Chemistry span.logo, span.logout {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    nav.Chemistry span.logo {
+        left: 20px;
+    }
+
+    nav.Chemistry span.logout {
+        right: 20px;
+        top: calc(25px - 10px);
+    }
+}
+
+hr {
+    margin: 20px auto;
+    width: calc(100% - 10px);
+    color: black;
+    outline: none;
+    border: 0;
+    border-bottom: 3px rgb(46, 46, 46) solid;
+    border-radius: 1.5px;
+}
+
+div.Chemistry {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.subject {
+    border-radius: var(--mainBorderRadius);
+    word-break: break-word;
+    height: 150px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--accentColor);
+    border-radius: 8px;
+    height: 200px;
+    position: relative;
+}
+
+.subject .image {
+    height: calc(100% - 40px);
+    padding: 0;
+    transition: transform 0.2s;
+}
+
+.subject .image:hover {
+    transform: scale(115%, 115%);
+}
+
+.subject .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px 7px 0 0;
+}
+
+.subject .subject-name {
+    background-color: var(--accentColor);
+    position: absolute;
+    width: calc(100%);
+    left: 0;
+    bottom: 0;
+    border-radius: 0 0 var(--mainBorderRadius) var(--mainBorderRadius);
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    /* padding-left: 10px; */
+    justify-content: center;
+}
+
+.chemistry_subj {
+    background-color: var(--accentColor);
+    border-radius: 8px;
+}
+.abb-sub {
+    padding: 25px;
+    color: #333;
+    font-size: 60px;
+}
+
+.chem-img {
+    width: 350px;
+    float: right;
+    margin-right: 32px;
+    height: 400px;
+}
+
+.tutor_name {
+    font-weight: bold;
+    color: #333;
+    padding: 20px;
+    margin-left: 20px;
+    position: absolute;
+    top: 50%;
+}
+
+.tutor_assis_name {
+    font-weight: bold;
+    color: #333;
+    padding: 20px;
+    margin-left: 20px;
+    position: absolute;
+    top: 60%;
+}
+
+.grade {
+    float: right;
+    background-color: var(--accentColor);
+    font-weight: bold;
+    color: #333;
+    padding: 10px 25px;
+    margin: 20px;
+    border-radius: 7px;
+}
+
+.name {
+    padding: 5px;
+    color: #fff;
+}
+
+.LO {
+    color: #333;
+    padding: 20px;
+    display: inline-block;
+
+}
+
+
+
+.all_los {
+    border-radius: 10px;
+    margin: 15px;
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    position: relative;
+    left: 0;
+
+}
+
+.lo_no {
+    background-color: var(--accentColor);
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    margin: 7px;
+    border-radius: 50%;
+    padding: -6px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.lo_name {
+    font-weight: bold;
+    color: #333;
+    margin-left: 20px;
+}
+
+
+
+/* Media screen */
+
+@media only screen and (max-width: 710px) {
+    .tutor_name {
+        font-weight: bold;
+        color: #333;
+        padding: 10px;
+        margin-left: 10px;
+        position: absolute;
+        top: 50%;
+    }
+    
+    .subject {
+        height: 150px;
+    }
+    .abb-sub {
+        font-size: 40px;
+    }
+    .name {
+        font-size: 10px;
+    }
+    
+    .tutor_assis_name {
+        font-weight: bold;
+        color: #333;
+        padding: 10px;
+        margin-left: 10px;
+        position: absolute;
+        top: 60%;
+    }
+    .chem-img {
+        width: 150px;
+        float: right;
+        height: 250px;
+        margin-right: 10px;
+    }
+   
+}
+
+
+@media only screen and (max-width: 450px) {
+    .tutor_name {
+        font-weight: bold;
+        color: #333;
+        padding: 10px;
+        margin-left: 10px;
+        position: absolute;
+        top: 60%;
+    }
+    .grade {
+        margin: 15px;
+        padding: 10px;
+    }
+    .chem-img {
+        width: 100px;
+        float: right;
+        margin-right: 10px;
+    }
+    .grade {
+        padding: 5px;
+        margin: 15px;
+    }
+    .lo_name {
+        font-size: 10px;
+    }
+
+    .name {
+        font-size: 10px;
+    }
+    
+    .tutor_assis_name {
+        font-weight: bold;
+        color: #333;
+        padding: 10px;
+        margin-left: 10px;
+        position: absolute;
+        top: 70%;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .chem-img {
+        width: 100px;
+        height: 100px;
+        margin-top: 15px;
+    }
+    .abb-sub{
+        font-size: 45px;
+    }
+    .LO {
+        font-size: 20px;
+    }
+    .tutor {
+        font-size: 10px;
+    }
+    .abb-sub{
+        width: 160px;
+    }
+
+}
+
+@media only screen and (max-width: 380px) {
+    .abb-sub{
+        width: 120px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .abb-sub {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 650px)  { 
+    .grade{
+        padding: 5px;
+        margin: 15px;
+    }
+    .LO {
+        font-size: 16px;
+
+    }
+    .chem-img{
+        width: 150px;
+    }
+}
+
+
+@media only screen and (max-width: 800px)  { 
+    .chem-img{
+        width: 250px;
+    }
+}

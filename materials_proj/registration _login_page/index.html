@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;0,900;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="images/registration.ico ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="illustration_signup">   
+        <img src="images/signup.png" class="ill_sign_img animate__animated animate__bounceInLeft" alt="illustration_signup">
+    </div>
+    <div class="registration">
+        <div class="content">
+            <h1 class="label">Get's Started</h1>
+            <span class="q-log">Already  have an account? Let's <span class="log">log in.</span></span>
+            <form action="" name="registration_form" method="post">
+                <div class="g_f-but">
+                    <button class="g-but but"><i class='bx bxl-google ico'></i><span class="l-g_but l-but">Sign Up With Google</span></button> 
+                    <button class="f-but but"><i class='bx bxl-facebook-circle ico'></i><span class="l-f_but l-but">Sign Up With Google</span></button>        
+                </div>
+                <div class="hr_or">
+                    <hr><span class="or">Or</span><hr>
+                </div>
+                <div class="inputs">
+                    <label class="email_label">Email</label>
+                    <i class='bx bxs-envelope'></i>
+                    <input type="email" placeholder="Enter Your Email" name="email" class="email">
+                    <label class="password_label">password</label>
+                    <i class='bx bxs-lock-alt'></i>
+                    <i class="fa-solid fa-eye-slash" id = "togglePassword" ></i>
+                    <input type="password" id = "id_password" name="password" placeholder="Enter Your Password" class="password">
+                    <label class="input_label">confirm password</label>
+                    <i class="fa-solid fa-eye-slash sec" id = "_togglePassword"></i>
+                    <i class='bx bxs-lock-open-alt'></i>
+                    <input type="password" id ="con_id_password" name="confirm_password" placeholder="Confirm Your Password" class="confirm_password">
+                    <button class="sign_up_but">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
